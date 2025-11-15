@@ -607,11 +607,7 @@ Cannot read the previousTitle for a route that has not yet been installed''',
                   : child);
 
         case Transition.native:
-          return const PageTransitionsTheme(
-            builders: {
-              TargetPlatform.android: ZoomPageTransitionsBuilder(),
-            },
-          ).buildTransitions(
+          return context.theme.pageTransitionsTheme.buildTransitions(
               route,
               context,
               iosAnimation,
@@ -647,11 +643,7 @@ Cannot read the previousTitle for a route that has not yet been installed''',
                 route.alignment, animation, secondaryAnimation, child);
           }
 
-          return const PageTransitionsTheme(
-            builders: {
-              TargetPlatform.android: ZoomPageTransitionsBuilder(),
-            },
-          ).buildTransitions(
+          return context.theme.pageTransitionsTheme.buildTransitions(
               route,
               context,
               iosAnimation,
